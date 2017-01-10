@@ -78,14 +78,30 @@
 		F0349B6E1E24D52700FC1A6F /* LoginWithFaceDemo */ = {
 			isa = PBXGroup;
 			children = (
-				F0349B6F1E24D52700FC1A6F /* AppDelegate.swift */,
-				F0349B711E24D52700FC1A6F /* ViewController.swift */,
+				F0349B821E24DC9D00FC1A6F /* Assets */,
 				F0349B731E24D52700FC1A6F /* Main.storyboard */,
-				F0349B761E24D52700FC1A6F /* Assets.xcassets */,
-				F0349B781E24D52700FC1A6F /* LaunchScreen.storyboard */,
-				F0349B7B1E24D52700FC1A6F /* Info.plist */,
+				F0349B711E24D52700FC1A6F /* ViewController.swift */,
+				F0349B811E24DC8500FC1A6F /* Supporting Files */,
 			);
 			path = LoginWithFaceDemo;
+			sourceTree = "<group>";
+		};
+		F0349B811E24DC8500FC1A6F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F0349B781E24D52700FC1A6F /* LaunchScreen.storyboard */,
+				F0349B6F1E24D52700FC1A6F /* AppDelegate.swift */,
+				F0349B7B1E24D52700FC1A6F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F0349B821E24DC9D00FC1A6F /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				F0349B761E24D52700FC1A6F /* Assets.xcassets */,
+			);
+			name = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,7 +294,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -321,7 +337,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -374,6 +390,7 @@
 				F0349B801E24D52700FC1A6F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
