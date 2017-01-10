@@ -9,17 +9,44 @@
 import UIKit
 import FBSDKLoginKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, FBSDKLoginButtonDelegate {
+    // MARK: - IBOutlet
+    @IBOutlet weak var fbBtn: FBSDKLoginButton!
+    
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("SDK version \(FBSDKSettings.sdkVersion())")
+        fbBtn.readPermissions = ["email"]
+        fbBtn.delegate = self
+        
+        if let token = FBSDKAccessToken.current() {
+            getUserData()
+        }
     }
     
-    // MARK: - IBAction
-    @IBAction func loginWithFacebook() {
+    // MARK: - Function
+    func getUserData() {
+        FBSDKGraphRequest(graphPath: "me",
+                          parameters: ["fields": "id, name, first_name, last_name, picture.type(large), email"])
+            .start(completionHandler: { (connection, result, error) -> Void in
+                if (error == nil){
+                    print(result!)
+                }
+        })
+    }
+    
+    // MARK: - FBSDKLoginButtonDelegate
+    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
+        getUserData()
+    }
+    
+    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
         
+    }
+    
+    func loginButtonWillLogin(_ loginButton: FBSDKLoginButton!) -> Bool {
+        return true
     }
 }
 
